@@ -2,108 +2,251 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Aura – Site de base</title>
+  <title>AURA – Open standard pour les œuvres (Public Draft)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #050816;
-      color: #f5f5f5;
+      background: radial-gradient(circle at top left, #1f2937 0, #020617 40%, #000 100%);
+      color: #f9fafb;
     }
     header {
-      padding: 20px 40px;
+      padding: 20px 32px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(148,163,184,0.25);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(2,6,23,0.9);
     }
-    header .logo {
+    .logo {
       font-weight: 600;
-      letter-spacing: 0.08em;
+      letter-spacing: .16em;
       text-transform: uppercase;
+      font-size: 12px;
     }
-    header nav a {
+    nav a {
       margin-left: 20px;
-      text-decoration: none;
-      color: #f5f5f5;
       font-size: 14px;
-      opacity: 0.8;
+      text-decoration: none;
+      color: #e5e7eb;
+      opacity: .85;
     }
-    header nav a:hover {
-      opacity: 1;
+    nav a:hover { opacity: 1; }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
     }
-    .hero {
-      min-height: calc(100vh - 80px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px;
-      max-width: 800px;
-    }
-    .hero h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-    .hero p {
-      font-size: 18px;
-      line-height: 1.6;
-      opacity: 0.8;
-      margin-bottom: 30px;
-    }
-    .hero button {
-      padding: 12px 26px;
+    .badge {
+      display: inline-flex;
+      align-items: center;
       border-radius: 999px;
+      border: 1px solid rgba(94,234,212,0.3);
+      padding: 4px 10px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #a5f3fc;
+      background: rgba(15,23,42,0.8);
+      margin-bottom: 16px;
+    }
+    .hero-title {
+      font-size: 34px;
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+    .hero-sub {
+      max-width: 620px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #cbd5f5;
+      margin-bottom: 28px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .btn-primary, .btn-ghost {
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-size: 14px;
       border: none;
       cursor: pointer;
-      font-size: 15px;
-      font-weight: 500;
-      background: linear-gradient(135deg, #6366f1, #ec4899);
-      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
     }
-    .hero button:hover {
-      opacity: 0.9;
+    .btn-primary {
+      background: linear-gradient(135deg, #4f46e5, #ec4899);
+      color: #fff;
+    }
+    .btn-primary:hover { opacity: .92; }
+    .btn-ghost {
+      border: 1px solid rgba(148,163,184,0.6);
+      color: #e5e7eb;
+      background: transparent;
+    }
+    .btn-ghost:hover {
+      background: rgba(15,23,42,0.85);
+    }
+    section {
+      margin-top: 56px;
+    }
+    section h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    section p {
+      font-size: 15px;
+      color: #cbd5f5;
+      line-height: 1.7;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      border-radius: 16px;
+      border: 1px solid rgba(148,163,184,0.4);
+      padding: 16px 18px;
+      background: radial-gradient(circle at top left, rgba(148,163,184,0.15), rgba(15,23,42,0.9));
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 15px;
+    }
+    .card p {
+      margin: 0;
+      font-size: 14px;
+      color: #d1d5db;
+    }
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 13px;
     }
     footer {
-      padding: 20px 40px;
+      border-top: 1px solid rgba(148,163,184,0.25);
+      padding: 16px 24px;
       font-size: 12px;
-      opacity: 0.6;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #9ca3af;
+      text-align: center;
     }
-    @media (max-width: 600px) {
-      header, .hero, footer {
-        padding: 20px;
-      }
-      .hero h1 {
-        font-size: 28px;
-      }
+    @media (max-width: 800px) {
+      header { padding: 14px 16px; }
+      main { padding: 24px 16px 60px; }
+      .hero-title { font-size: 26px; }
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="logo">Aura</div>
+    <div class="logo">AURA · OPEN STANDARD</div>
     <nav>
       <a href="#about">À propos</a>
+      <a href="#principes">Principes</a>
+      <a href="#roadmap">Feuille de route</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main class="hero">
-    <h1>Aura</h1>
-    <p>
-      Texte de présentation de ton projet Aura.  
-      Tu peux expliquer en quelques lignes ce que c’est, à qui ça s’adresse,
-      et pourquoi c’est différent.
-    </p>
-    <button onclick="alert('Tu peux remplacer ça par un vrai lien plus tard')">
-      Me contacter
-    </button>
+  <main>
+    <section id="about">
+      <div class="badge">Public draft</div>
+      <h1 class="hero-title">
+        AURA est un standard ouvert pour décrire, authentifier et suivre les œuvres dans le monde réel.
+      </h1>
+      <p class="hero-sub">
+        Ce site présente une première version publique du concept AURA&nbsp;: un langage commun pour relier
+        une œuvre à une identité numérique vérifiable, sans dépendre d’une plateforme propriétaire.
+        Le contenu publié ici est volontairement limité et pourra évoluer.
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#contact">Manifester un intérêt</a>
+        <a class="btn-ghost" href="#principes">Lire les principes du standard</a>
+      </div>
+    </section>
+
+    <section id="principes">
+      <h2>Principes du standard AURA</h2>
+      <p>
+        AURA n’est pas un produit fini, mais une base de travail pour un standard ouvert autour des œuvres.
+        L’ambition est de rester compatible avec les cadres existants (droit d’auteur, gestion collective,
+        normes techniques) tout en laissant la place à l’innovation.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>1. Neutralité</h3>
+          <p>
+            AURA ne remplace pas les institutions ni les outils existants. Il définit une couche de
+            description neutre, exploitable par différents acteurs (auteurs, organismes, diffuseurs,
+            services tiers).
+          </p>
+        </div>
+        <div class="card">
+          <h3>2. Vérifiabilité</h3>
+          <p>
+            Chaque enregistrement AURA doit pouvoir être vérifié de manière indépendante&nbsp;:
+            provenance, intégrité des métadonnées, lien avec l’œuvre concernée.
+          </p>
+        </div>
+        <div class="card">
+          <h3>3. Souveraineté</h3>
+          <p>
+            Le standard vise une gouvernance ouverte, documentée et compatible avec une
+            implémentation souveraine (hébergement européen, transparence du code et des règles).
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap">
+      <h2>Feuille de route (brouillon)</h2>
+      <p>
+        Cette première version publique est volontairement minimale. Les prochaines étapes pourront
+        inclure&nbsp;:
+      </p>
+      <ul>
+        <li>Un schéma de métadonnées AURA publiquement consultable pour les œuvres.</li>
+        <li>Des exemples d’implémentation (référentiels, API, intégration avec des registres existants).</li>
+        <li>Une gouvernance formalisée (groupe de travail, versionnage, commentaires publics).</li>
+      </ul>
+      <p class="mono">
+        Version : AURA · Public Draft 0.1 – Ce site ne préjuge d’aucun accord institutionnel ni d’aucune
+        adoption formelle du standard.
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Si vous représentez une institution, un organisme de gestion, une entreprise ou un collectif
+        intéressé par l’idée d’un standard ouvert AURA pour les œuvres, vous pouvez signaler votre intérêt
+        via le canal de contact habituel (e-mail). Aucune information sensible ne doit être envoyée
+        depuis ce site.
+      </p>
+      <p>
+        Un formulaire de contact dédié et une documentation technique seront proposés dans une phase
+        ultérieure, une fois les modalités de gouvernance clarifiées.
+      </p>
+    </section>
   </main>
 
   <footer>
-    © <span id="year"></span> Aura. Tous droits réservés.
+    © <span id="year"></span> AURA – Open standard pour les œuvres (Public Draft). Contenu susceptible d’évoluer sans préavis.
   </footer>
 
   <script>
