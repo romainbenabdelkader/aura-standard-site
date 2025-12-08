@@ -1,147 +1,118 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>AURA — European Origin Proof Standard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-        content="AURA is an open European origin-proof standard for human, hybrid and AI-generated works.">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+AURA
+====
 
-  <header>
-    <h1>AURA</h1>
-    <p class="subtitle">European Origin Proof Standard</p>
-    <p class="tagline">
-      Open standard for verifiable proof of origin for human, hybrid and AI-generated works.
-    </p>
+Open Standard for Verifiable Proof of Origin (European-compatible)  
+Public Draft v0.1 — Specification coming soon
 
-    <div class="buttons">
-      <a href="https://github.com/romainbenabdelkader/AURA-STANDARD" target="_blank">
-        GitHub Specification (Draft)
-      </a>
-      <a href="#" class="secondary">
-        Public Draft v0.1 (coming soon)
-      </a>
-    </div>
-  </header>
+AURA is an open standard that defines how to declare and verify the origin of digital assets (audio, video, image, text, datasets, AI outputs) in a way that is cryptographically verifiable and interoperable across platforms and institutions.
 
-  <main>
+---
 
-    <section>
-      <h2>What is AURA?</h2>
-      <p>
-        AURA is an open standard that defines how to declare and verify the origin of digital assets
-        (audio, video, image, text, datasets, AI outputs) in a way that is cryptographically verifiable
-        and interoperable across platforms and institutions.
-      </p>
-    </section>
+What is AURA?
+-------------
 
-    <section>
-      <h2>Scope & Principles</h2>
-      <ul>
-        <li>Origin proof at the moment of creation, not after the fact.</li>
-        <li>Cryptographic integrity (hash) and verifiable timestamps.</li>
-        <li>Separation between the standard (AURA) and implementations (services, products).</li>
-        <li>Alignment with European frameworks (AI Act, TDM opt-out, copyright).</li>
-      </ul>
-    </section>
+AURA provides a neutral, open and machine-readable framework for:
 
-    <section>
-      <h2>What AURA does <span class="muted">(and does not do)</span></h2>
-      <div class="columns">
-        <div>
-          <h3>Does</h3>
-          <ul>
-            <li>Provide a structured manifest for origin, rights and integrity.</li>
-            <li>Enable independent verification of origin and integrity.</li>
-            <li>Expose machine-readable signals for AI training and TDM rights.</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Does not</h3>
-          <ul>
-            <li>No content recognition or fingerprinting database.</li>
-            <li>No DRM, no playback control.</li>
-            <li>No decision-making on licensing terms or remuneration.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+- Declaring the origin of digital works at the moment of creation  
+- Verifying integrity and provenance independently  
+- Exposing transparent signals for lawful use, including AI training and TDM rights  
 
-    <section>
-      <h2>Governance</h2>
-      <p>
-        AURA is published as an open <strong>Public Draft</strong>. The objective is to
-        converge towards formal standardization with an independent body
-        (e.g. European or international standardization organizations).
-      </p>
-      <p>
-        Implementations (such as proof-of-origin services) remain fully independent and
-        interoperable as long as they comply with the AURA specification.
-      </p>
-    </section>
+AURA is designed as an infrastructure layer for trust, not as a product, service or platform.
 
-    <section>
-      <h2>Why Europe needs AURA</h2>
-      <p>
-        The European Union holds specific competences in the field of culture, copyright,
-        audiovisual creation and the protection of cultural diversity.
-        These competences include support for cross-border cooperation, transparency of rights
-        management and the protection of creators in the digital environment.
-      </p>
+---
 
-      <p>
-        With the emergence of artificial intelligence, generative systems and large-scale content
-        transformation, the question of origin, authorship and lawful use of works has become a
-        strategic issue for Europe.
-      </p>
+Scope & Principles
+------------------
 
-      <p>
-        AURA is designed as a European-compatible open standard that enables:
-      </p>
+- Proof of origin at creation time, not after the fact  
+- Cryptographic integrity (hash-based verification)  
+- Verifiable timestamps  
+- Separation between the standard (AURA) and implementations (services, products, platforms)  
+- Alignment with European regulatory frameworks, including AI Act, TDM opt-out and copyright  
 
-      <ul>
-        <li>Verifiable proof of origin for human, hybrid and AI-generated works.</li>
-        <li>Machine-readable transparency signals for AI training and TDM rights.</li>
-        <li>Interoperability between platforms, collecting societies and public institutions.</li>
-        <li>Auditability and legal traceability across borders.</li>
-      </ul>
+---
 
-      <p>
-        AURA does not replace national or European regulations.
-        It provides a technical and legal interoperability layer compatible with existing
-        European frameworks, including copyright law, transparency obligations and emerging
-        AI regulation.
-      </p>
-    </section>
+What AURA does (and does not do)
+--------------------------------
 
-    <section>
-      <h2>License</h2>
-      <p>
-        The AURA standard is released under the <strong>Apache License 2.0</strong>,
-        a permissive open-source license suitable for institutional and industrial adoption.
-      </p>
-    </section>
+✅ **AURA does**
 
-    <section>
-      <h2>Get involved</h2>
-      <p>
-        The work on AURA is iterative. Feedback from creators, collecting societies,
-        platforms, AI actors and regulators is welcome.
-      </p>
-      <ul>
-        <li>Open issues and proposals on the GitHub repository.</li>
-        <li>Contribute to the manifest and interoperability profiles.</li>
-      </ul>
-    </section>
+- Provide a structured manifest for origin, rights and integrity  
+- Enable independent verification of origin and integrity  
+- Expose machine-readable transparency signals for AI training and TDM rights  
 
-  </main>
+❌ **AURA does not**
 
-  <footer>
-    <p>© 2025 — AURA Open Standard — Public Draft</p>
-  </footer>
+- No content recognition or fingerprinting database  
+- No DRM, no playback or usage control  
+- No decision-making on licensing terms or remuneration  
 
-</body>
-</html>
+AURA defines how provenance is declared and verified, not how content is monetized or controlled.
+
+---
+
+Governance
+----------
+
+AURA is published as an open Public Draft.  
+Its objective is to converge toward formal standardization with an independent standardization body (European or international).
+
+Implementations (such as proof-of-origin services) remain fully independent and interoperable, as long as they comply with the AURA specification.
+
+---
+
+Why Europe needs AURA
+---------------------
+
+The European Union holds specific competences in the fields of:
+
+- Culture  
+- Copyright  
+- Audiovisual creation  
+- Protection of cultural diversity  
+
+With the emergence of artificial intelligence, generative systems and large-scale content transformation, the questions of origin, authorship and lawful use of works have become strategic issues for Europe.
+
+AURA is designed as a European-compatible open standard that enables:
+
+- Verifiable proof of origin for human, hybrid and AI-generated works  
+- Machine-readable transparency signals for AI training and TDM rights  
+- Interoperability between platforms, collecting societies and public institutions  
+- Auditability and legal traceability across borders  
+
+AURA does not replace national or European regulations.  
+It provides a technical and legal interoperability layer compatible with existing European frameworks, including:
+
+- Copyright law  
+- Transparency obligations  
+- Emerging AI regulation  
+
+---
+
+License
+-------
+
+The AURA standard is released under the Apache License 2.0, a permissive open-source license suitable for institutional and industrial adoption.
+
+---
+
+Get involved
+------------
+
+The work on AURA is iterative.  
+Feedback from:
+
+- Creators  
+- Collecting societies  
+- Platforms  
+- AI actors  
+- Regulators  
+
+is welcome.
+
+- Open issues and proposals via the GitHub repository  
+- Contributions to the manifest and interoperability profiles  
+
+---
+
+© 2025 — AURA Open Standard — Public Draft
