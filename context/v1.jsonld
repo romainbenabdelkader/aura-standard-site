@@ -1,0 +1,38 @@
+{
+  "@context": {
+    "@version": 1.1,
+
+    "id": "@id",
+    "type": "@type",
+
+    "AURA": "https://aura-standard.org/ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "aura_id": "AURA:aura_id",
+    "origin_proof_version": "AURA:origin_proof_version",
+    "profiles": "AURA:profiles",
+
+    "issued_at": {
+      "@id": "AURA:issued_at",
+      "@type": "xsd:dateTime"
+    },
+
+    "asset": "AURA:asset",
+    "subject": "AURA:subject",
+    "origin": "AURA:origin",
+    "rights": "AURA:rights",
+    "claims": "AURA:claims",
+    "declared_scope": "AURA:declared_scope",
+    "interpretation": "AURA:interpretation",
+
+    "issuer_id": "AURA:issuer_id",
+    "public_key": "AURA:public_key",
+
+    "canonicalization": "AURA:canonicalization",
+
+    "signature": "AURA:signature",
+    "alg": "AURA:alg",
+    "encoding": "AURA:encoding",
+    "value": "AURA:value"
+  }
+}
