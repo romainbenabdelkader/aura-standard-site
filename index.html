@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AURA • Proposed Open European Origin-Proof Standard Initiative</title>
-    <meta name="description" content="AURA is a proposed open European origin-proof standard initiative for verifiable technical proof of origin and integrity for human, hybrid and AI-generated works.">
+    <title>AURA • Open Proof and Provenance Standard for Digital Assets</title>
+    <meta name="description" content="AURA-STANDARD v1.1.0 is a published open proof and provenance standard for digital assets: verifiable origin, integrity, timestamped declarations, rights-related signals and independent verification in AI-related environments.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -38,29 +38,44 @@
 
 <body>
 
-<h1>AURA — Proposed Open European Origin-Proof Standard Initiative</h1>
-<p><strong>Public draft for verifiable proof of origin for human, hybrid and AI-generated works</strong><br>
-Public Draft v0.1 — open specification under public review</p>
+<h1>AURA — Open Proof and Provenance Standard for Digital Assets</h1>
+<p><strong>Open standard for verifiable proof of origin for human, hybrid and AI-generated works</strong><br>
+AURA-STANDARD v1.1.0 — published open standard for review, interoperability work and controlled pilots</p>
 
 <hr>
 
 <h2>What is AURA?</h2>
 <p>
-AURA is a proposed open, neutral and interoperable origin-proof standard initiative that defines how to declare and verify technical origin
-signals for digital assets including audio, video, image, text, datasets and AI-generated outputs in a cryptographically
-verifiable and institution-compatible way.
+AURA is an open proof and provenance standard for digital assets. It provides a verifiable way to document origin, integrity, timestamped declarations, rights-related signals and independent verification in AI-related environments.
 </p>
 
-<p>AURA provides a sovereign origin layer that enables:</p>
+<p>
+AURA establishes technical facts. It does not determine legal ownership, originality, infringement, liability or actual AI use. Legal qualification remains for institutions, auditors, regulators or courts.
+</p>
+
+<hr>
+
+<h2>Standard, Pilot and Verifier</h2>
 <ul>
-    <li>verifiable origin declaration at the moment of creation</li>
-    <li>independent verification by platforms, regulators, collecting societies and institutions</li>
-    <li>machine-readable transparency signals for AI training and TDM obligations</li>
-    <li>interoperability with existing identifiers and metadata frameworks</li>
-    <li>compatibility with human-created, AI-generated and hybrid works</li>
+    <li><strong>AURA is the open standard.</strong></li>
+    <li><strong>AUTHENTICA / LockDNA is the first pilot implementation.</strong></li>
+    <li><strong>AURA-VERIFIER is the independent verifier.</strong></li>
 </ul>
 
-<p><strong>AURA makes origin and integrity statements verifiable. It does not decide legal ownership, infringement or liability.</strong></p>
+<p><em>AUTHENTICA is a pilot implementation and is not the standard itself.</em></p>
+
+<hr>
+
+<h2>Official References and Links</h2>
+<ul>
+    <li>AURA-STANDARD v1.1.0: <a href="https://doi.org/10.5281/zenodo.21251473">https://doi.org/10.5281/zenodo.21251473</a></li>
+    <li>AURA-STANDARD concept DOI: <a href="https://doi.org/10.5281/zenodo.19123073">https://doi.org/10.5281/zenodo.19123073</a></li>
+    <li>AURA-VERIFIER v1.0.1: <a href="https://doi.org/10.5281/zenodo.21251287">https://doi.org/10.5281/zenodo.21251287</a></li>
+    <li>AURA-VERIFIER concept DOI: <a href="https://doi.org/10.5281/zenodo.21251286">https://doi.org/10.5281/zenodo.21251286</a></li>
+    <li>Independent verifier: <a href="https://verify.aura-standard.org/web/">https://verify.aura-standard.org/web/</a></li>
+    <li>Standard repository: <a href="https://github.com/romainbenabdelkader/AURA-STANDARD">https://github.com/romainbenabdelkader/AURA-STANDARD</a></li>
+    <li>Verifier repository: <a href="https://github.com/romainbenabdelkader/AURA-VERIFIER">https://github.com/romainbenabdelkader/AURA-VERIFIER</a></li>
+</ul>
 
 <hr>
 
@@ -101,17 +116,12 @@ verifiable and institution-compatible way.
 
 <hr>
 
-<h2>AURA Manifest (Minimal Draft Fields)</h2>
+<h2>Canonical schemas</h2>
 
 <ul>
-    <li><code>origin</code></li>
-    <li><code>issuer</code></li>
-    <li><code>issuer_id</code> (registered in a trusted public key registry)</li>
-    <li><code>issued_at</code></li>
-    <li><code>hash</code></li>
-    <li><code>rights.tdm_opt_out</code></li>
-    <li><code>references</code> (ISRC, ISWC, other identifiers)</li>
-    <li><code>native_signature_id</code> (optional)</li>
+    <li><strong>AURA manifest v1.0.0</strong> — frozen canonical schema</li>
+    <li><strong>AURA manifest v1.1.0</strong> — <code>reference_anchor</code> and <code>prior_evidence</code> evolution</li>
+    <li><strong>v0.1 material</strong> is retained as legacy / superseded public draft</li>
 </ul>
 
 <p><em>The manifest does not require access to the content itself.</em></p>
@@ -120,7 +130,7 @@ verifiable and institution-compatible way.
 
 <h2>Governance</h2>
 <p>
-AURA is published as an open Public Draft.  
+AURA is published as an open standard (AURA-STANDARD v1.1.0).
 Future governance may evolve toward an open, transparent and multi-stakeholder process inspired by recognized open standardization practices.
 </p>
 
@@ -187,12 +197,12 @@ The public materials are released under the <strong>Apache License 2.0</strong>,
 <h2>Intellectual Property Position</h2>
 
 <p>
-This Public Draft reflects an independently conceived and publicly documented standard.
+This published open standard reflects an independently conceived and publicly documented standard.
 It was developed prior to, and separately from, any external confidential collaboration.
 </p>
 
 <p>
-The AURA Draft contains <strong>no confidential or proprietary information</strong> from any partner, institution or private entity.
+The AURA standard contains <strong>no confidential or proprietary information</strong> from any partner, institution or private entity.
 All concepts and structures described herein are published openly for public review as part of an open standardization process.
 </p>
 
@@ -224,7 +234,7 @@ No additional rights or claims are granted or implied beyond those explicitly se
 
 <hr>
 
-<p>© 2026 — <strong>AURA</strong> — Public Draft</p>
+<p>© 2026 — <strong>AURA</strong> — AURA-STANDARD v1.1.0 · Published open standard</p>
 
 </body>
 </html>
