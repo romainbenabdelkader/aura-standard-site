@@ -40,7 +40,8 @@
 
 <h1>AURA — Open Technical Specification for Verifiable Origin Declarations and Asset Integrity</h1>
 <p><strong>Signed origin declarations, asset integrity and independent verification across digital content types</strong><br>
-AURA-STANDARD v1.2.1 — published open technical specification for review, interoperability work and controlled pilots</p>
+Latest archived specification: AURA-STANDARD v1.2.1.<br>
+Documentation updated 2026-11-01; current verifier: AURA-VERIFIER v1.2.0.</p>
 
 <hr>
 
@@ -55,14 +56,14 @@ AURA can establish technical facts such as asset integrity and signature validit
 
 <hr>
 
-<h2>Specification, Pilot and Verifier</h2>
+<h2>Specification and Implementations</h2>
 <ul>
     <li><strong>AURA is the open technical specification.</strong></li>
-    <li><strong>AUTHENTICA / LockDNA is the first pilot implementation.</strong></li>
-    <li><strong>AURA-VERIFIER is the independent verifier.</strong></li>
+    <li><strong>Applications and issuers can implement the published specification independently.</strong></li>
+    <li><strong>AURA-VERIFIER is a standalone, open-source reference verifier.</strong></li>
 </ul>
 
-<p><em>AUTHENTICA is a pilot implementation and is not the AURA specification itself.</em></p>
+<p>No application or hosted registry is a prerequisite for local verification. A passing evidence package does not certify the application that produced it. Publication of the reference verifier does not establish an independent external audit.</p>
 
 <hr>
 
@@ -70,12 +71,15 @@ AURA can establish technical facts such as asset integrity and signature validit
 <ul>
     <li>AURA-STANDARD v1.2.1: <a href="https://doi.org/10.5281/zenodo.22071523">https://doi.org/10.5281/zenodo.22071523</a></li>
     <li>AURA-STANDARD concept DOI: <a href="https://doi.org/10.5281/zenodo.19123073">https://doi.org/10.5281/zenodo.19123073</a></li>
-    <li>AURA-VERIFIER v1.1.0: <a href="https://doi.org/10.5281/zenodo.22069698">https://doi.org/10.5281/zenodo.22069698</a></li>
+    <li>AURA-VERIFIER v1.2.0: <a href="https://doi.org/10.5281/zenodo.23857156">https://doi.org/10.5281/zenodo.23857156</a> · <a href="https://github.com/romainbenabdelkader/AURA-VERIFIER/releases/tag/v1.2.0">release notes</a></li>
+    <li>Historical AURA-VERIFIER v1.1.0 archive: <a href="https://doi.org/10.5281/zenodo.22069698">https://doi.org/10.5281/zenodo.22069698</a></li>
     <li>AURA-VERIFIER concept DOI: <a href="https://doi.org/10.5281/zenodo.21251286">https://doi.org/10.5281/zenodo.21251286</a></li>
-    <li>Independent verifier: <a href="https://verify.aura-standard.org/web/">https://verify.aura-standard.org/web/</a></li>
+    <li>Web verifier: <a href="https://verify.aura-standard.org/web/">https://verify.aura-standard.org/web/</a></li>
     <li>Specification repository: <a href="https://github.com/romainbenabdelkader/AURA-STANDARD">https://github.com/romainbenabdelkader/AURA-STANDARD</a></li>
     <li>Verifier repository: <a href="https://github.com/romainbenabdelkader/AURA-VERIFIER">https://github.com/romainbenabdelkader/AURA-VERIFIER</a></li>
 </ul>
+
+<p>The web verifier was checked against v1.2.0 on 2026-11-01. Its live URL can change. See the <a href="https://github.com/romainbenabdelkader/AURA-STANDARD/blob/2ef46b04aae922eeb576606fa9b2ccb8c802a28a/IMPLEMENTATION_STATUS.md">dated implementation status</a> for the exact source commit, archive digests and deployment-check scope. Standard releases, manifest schemas and verifier releases have separate version numbers; subsequent documentation updates do not alter archived releases.</p>
 
 <hr>
 
@@ -102,7 +106,7 @@ AURA can establish technical facts such as asset integrity and signature validit
     <li>Enable independent checks of asset integrity, canonical signed payloads and Ed25519 signatures</li>
     <li>Distinguish issuer-declared issuance time from independent trusted timestamp evidence</li>
     <li>Support local and offline verification when evidence and trust material are supplied locally</li>
-    <li>Allow optional links to external identifiers and prior evidence</li>
+    <li>Allow extension fields and prior-evidence references, with the current limitations described below</li>
 </ul>
 
 <h3>AURA Does Not</h3>
@@ -131,6 +135,8 @@ AURA can establish technical facts such as asset integrity and signature validit
 </ul>
 
 <p><em>AURA supports detached and fileless evidence. Asset bytes are required only when checking an asset-integrity claim.</em></p>
+
+<p>The current schemas do not define an ISRC/ISWC field convention or a normative digest rule for <code>prior_evidence.manifest_hash</code>. The verifier's optional RFC 3161 timestamp feature has its own documented canonical digest rule; it does not validate a linked evidence chain. See <a href="https://github.com/romainbenabdelkader/AURA-STANDARD/blob/2ef46b04aae922eeb576606fa9b2ccb8c802a28a/IMPLEMENTATION_STATUS.md#open-specification-work">open specification work</a>.</p>
 
 <hr>
 
@@ -191,7 +197,7 @@ With generative AI, large-scale datasets and automated transformations, <strong>
 <ul>
     <li>signed origin declarations for human, hybrid and AI-generated works</li>
     <li>machine-readable transparency and rights-reservation declarations</li>
-    <li>cross border interoperability between platforms, CMOs and institutions</li>
+    <li>local verification of evidence packages that platforms, CMOs and institutions can evaluate in their own integration work</li>
     <li>technical traceability that can support institutional and regulatory workflows</li>
 </ul>
 
@@ -199,17 +205,17 @@ With generative AI, large-scale datasets and automated transformations, <strong>
 
 <hr>
 
-<h2>Interoperability</h2>
+<h2>Interoperability Status</h2>
 
-<p>AURA complements, but does not replace:</p>
+<p>Integration with existing identifiers and provenance systems remains work to demonstrate:</p>
 <ul>
-    <li>ISRC / ISWC</li>
-    <li>DDEX metadata frameworks</li>
-    <li>C2PA (content authenticity)</li>
-    <li>National copyright registries</li>
+    <li><strong>ISRC / ISWC:</strong> additional fields are allowed, but current schemas define no shared field path or identifier validation. Historical v0.1 mappings are not current normative mappings.</li>
+    <li><strong>DDEX:</strong> no tested message exchange or current normative identifier mapping is published.</li>
+    <li><strong>C2PA:</strong> overlapping provenance, signature and timestamp functions; a complementary integration requires a documented mapping and interoperability tests.</li>
+    <li><strong>Registries:</strong> the TPKR is a conceptual model. The reference verifier accepts caller-supplied local key-status material; it does not operate a registry or establish the authenticity and freshness of that material.</li>
 </ul>
 
-<p><em>AURA focuses on origin declaration, manifest integrity and rights-reservation signals. It complements content-authenticity systems without replacing them.</em></p>
+<p>Dedicated dataset/model profiles and registry infrastructure remain deferred. Carrying an identifier or hashing a file does not demonstrate interoperability, legal authority or institutional adoption.</p>
 
 <hr>
 
@@ -255,12 +261,13 @@ No additional rights or claims are granted or implied beyond those explicitly se
 <ul>
     <li>Open issues and proposals on the <a href="https://github.com/romainbenabdelkader/AURA-STANDARD">AURA-STANDARD GitHub repository</a></li>
     <li>Contribute to the manifest and interoperability profiles</li>
-    <li>Review the <a href="https://github.com/romainbenabdelkader/aura-cli">AURA CLI proof demo</a> and <a href="https://github.com/romainbenabdelkader/aura-core">AURA Core primitives</a></li>
+    <li>Start current-format integration with the <a href="https://github.com/romainbenabdelkader/AURA-VERIFIER/blob/6b1a631a9febdd724cfa819c67ec9d285179c27c/INTEGRATORS.md">verifier v1.2.0 integrator guide</a></li>
+    <li>The <a href="https://github.com/romainbenabdelkader/aura-cli">AURA CLI proof demo</a> and <a href="https://github.com/romainbenabdelkader/aura-core">AURA Core primitives</a> are historical v0.1 demonstrations, not current-format signing SDKs</li>
 </ul>
 
 <hr>
 
-<p>© 2026 — <strong>AURA</strong> — AURA-STANDARD v1.2.1 · Open technical specification</p>
+<p>© 2026 — <strong>AURA</strong> — Latest archived specification: AURA-STANDARD v1.2.1 · Documentation updated 2026-11-01</p>
 
 </body>
 </html>
