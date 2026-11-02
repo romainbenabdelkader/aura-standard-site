@@ -41,7 +41,7 @@
 <h1>AURA — Open Technical Specification for Verifiable Origin Declarations and Asset Integrity</h1>
 <p><strong>Signed origin declarations, asset integrity and independent verification across digital content types</strong><br>
 Latest archived specification: AURA-STANDARD v1.2.1.<br>
-Documentation updated 2026-11-01; current verifier: AURA-VERIFIER v1.2.0.</p>
+Documentation updated 2026-11-02; current verifier: AURA-VERIFIER v1.2.1.</p>
 
 <hr>
 
@@ -71,7 +71,7 @@ AURA can establish technical facts such as asset integrity and signature validit
 <ul>
     <li>AURA-STANDARD v1.2.1: <a href="https://doi.org/10.5281/zenodo.22071523">https://doi.org/10.5281/zenodo.22071523</a></li>
     <li>AURA-STANDARD concept DOI: <a href="https://doi.org/10.5281/zenodo.19123073">https://doi.org/10.5281/zenodo.19123073</a></li>
-    <li>AURA-VERIFIER v1.2.0: <a href="https://doi.org/10.5281/zenodo.23857156">https://doi.org/10.5281/zenodo.23857156</a> · <a href="https://github.com/romainbenabdelkader/AURA-VERIFIER/releases/tag/v1.2.0">release notes</a></li>
+    <li>AURA-VERIFIER v1.2.1: <a href="https://doi.org/10.5281/zenodo.23898686">https://doi.org/10.5281/zenodo.23898686</a> · <a href="https://github.com/romainbenabdelkader/AURA-VERIFIER/releases/tag/v1.2.1">release notes</a></li>
     <li>Historical AURA-VERIFIER v1.1.0 archive: <a href="https://doi.org/10.5281/zenodo.22069698">https://doi.org/10.5281/zenodo.22069698</a></li>
     <li>AURA-VERIFIER concept DOI: <a href="https://doi.org/10.5281/zenodo.21251286">https://doi.org/10.5281/zenodo.21251286</a></li>
     <li>Web verifier: <a href="https://verify.aura-standard.org/web/">https://verify.aura-standard.org/web/</a></li>
@@ -79,7 +79,7 @@ AURA can establish technical facts such as asset integrity and signature validit
     <li>Verifier repository: <a href="https://github.com/romainbenabdelkader/AURA-VERIFIER">https://github.com/romainbenabdelkader/AURA-VERIFIER</a></li>
 </ul>
 
-<p>The web verifier was checked against v1.2.0 on 2026-11-01. Its live URL can change. See the <a href="https://github.com/romainbenabdelkader/AURA-STANDARD/blob/2ef46b04aae922eeb576606fa9b2ccb8c802a28a/IMPLEMENTATION_STATUS.md">dated implementation status</a> for the exact source commit, archive digests and deployment-check scope. Standard releases, manifest schemas and verifier releases have separate version numbers; subsequent documentation updates do not alter archived releases.</p>
+<p>The web verifier was checked against v1.2.1 on 2026-11-02; 20 served source and web files matched the release commit. Its live URL can change. See the <a href="https://github.com/romainbenabdelkader/AURA-STANDARD/blob/54bd8a8fc7bd80b1f61b90ed624b50634a6ccc01/IMPLEMENTATION_STATUS.md">dated implementation status</a> for the exact source commit, archive digests and deployment-check scope. Standard releases, manifest schemas and verifier releases have separate version numbers; subsequent documentation updates do not alter archived releases.</p>
 
 <hr>
 
@@ -136,7 +136,7 @@ AURA can establish technical facts such as asset integrity and signature validit
 
 <p><em>AURA supports detached and fileless evidence. Asset bytes are required only when checking an asset-integrity claim.</em></p>
 
-<p>The current schemas do not define an ISRC/ISWC field convention or a normative digest rule for <code>prior_evidence.manifest_hash</code>. The verifier's optional RFC 3161 timestamp feature has its own documented canonical digest rule; it does not validate a linked evidence chain. See <a href="https://github.com/romainbenabdelkader/AURA-STANDARD/blob/2ef46b04aae922eeb576606fa9b2ccb8c802a28a/IMPLEMENTATION_STATUS.md#open-specification-work">open specification work</a>.</p>
+<p>The current schemas do not define an ISRC/ISWC field convention or a normative digest rule for <code>prior_evidence.manifest_hash</code>. The verifier's optional RFC 3161 timestamp feature has its own documented canonical digest rule; it does not validate a linked evidence chain. See <a href="https://github.com/romainbenabdelkader/AURA-STANDARD/blob/54bd8a8fc7bd80b1f61b90ed624b50634a6ccc01/IMPLEMENTATION_STATUS.md#open-specification-work">open specification work</a>.</p>
 
 <hr>
 
@@ -261,7 +261,7 @@ No additional rights or claims are granted or implied beyond those explicitly se
 <ul>
     <li>Open issues and proposals on the <a href="https://github.com/romainbenabdelkader/AURA-STANDARD">AURA-STANDARD GitHub repository</a></li>
     <li>Contribute to the manifest and interoperability profiles</li>
-    <li>Start current-format integration with the <a href="https://github.com/romainbenabdelkader/AURA-VERIFIER/blob/6b1a631a9febdd724cfa819c67ec9d285179c27c/INTEGRATORS.md">verifier v1.2.0 integrator guide</a></li>
+    <li>Start current-format integration with the <a href="https://github.com/romainbenabdelkader/AURA-VERIFIER/blob/e1fa13c4fb253c2e07a99538524b869028bb62b4/INTEGRATORS.md">verifier v1.2.1 integrator guide</a></li>
     <li>The <a href="https://github.com/romainbenabdelkader/aura-cli">AURA CLI proof demo</a> and <a href="https://github.com/romainbenabdelkader/aura-core">AURA Core primitives</a> are historical v0.1 demonstrations, not current-format signing SDKs</li>
 </ul>
 
